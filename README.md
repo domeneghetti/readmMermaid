@@ -7,5 +7,7 @@ sequenceDiagram
 GitHub ->> Mermaid: criar bloco de código mermaid
 Mermaid ->> Bloco: informar tipo de diagrama
 Bloco ->> Conteudo: montar diagrama
-Mermaid ->> GitHub: fechar bloco
+Conteudo ->> Bloco: terminar diagrama
+Bloco ->> Mermaid: fechar bloco
+Mermaid ->> GitHub: visualizar diagrama
 ```
