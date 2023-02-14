@@ -14,6 +14,7 @@ Mermaid ->> GitHub: show diagram
 ```
 
 2 - Class diagram
+```mermaid
 ---
 title: Animal example
 ---
@@ -40,8 +41,10 @@ classDiagram
         +bool is_wild
         +run()
     }
+```
 
 3 - State diagrama
+```mermaid
 ---
 title: Simple sample
 ---
@@ -53,8 +56,10 @@ stateDiagram-v2
     Moving --> Still
     Moving --> Crash
     Crash --> [*]
+```
 
 4 - Entity Relationship diagrama
+```mermaid
 ---
 title: Order example
 ---
@@ -62,8 +67,10 @@ erDiagram
     CUSTOMER ||--o{ ORDER : places
     ORDER ||--|{ LINE-ITEM : contains
     CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-    
+```
+
 5 - Git graph diagrama
+```mermaid
 ---
 title: Example Git diagram
 ---
@@ -78,3 +85,4 @@ gitGraph
    merge develop
    commit
    commit
+```
