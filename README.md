@@ -12,3 +12,69 @@ Content ->> Block: close diagram
 Block ->> Mermaid: close block
 Mermaid ->> GitHub: show diagram
 ```
+
+2 - Class diagram
+---
+title: Animal example
+---
+classDiagram
+    note "From Duck till Zebra"
+    Animal <|-- Duck
+    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+        +String beakColor
+        +swim()
+        +quack()
+    }
+    class Fish{
+        -int sizeInFeet
+        -canEat()
+    }
+    class Zebra{
+        +bool is_wild
+        +run()
+    }
+
+3 - State diagrama
+---
+title: Simple sample
+---
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+
+4 - Entity Relationship diagrama
+---
+title: Order example
+---
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+    
+5 - Git graph diagrama
+---
+title: Example Git diagram
+---
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   checkout main
+   merge develop
+   commit
+   commit
